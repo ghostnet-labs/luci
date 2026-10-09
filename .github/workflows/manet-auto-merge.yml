@@ -1,7 +1,7 @@
 name: Handle passing PRs
 on:
   workflow_run:
-    workflows: ["Manet merge gate","Test Build","Test Formalities","GitHub pages"]
+    workflows: ["Manet merge gate","Test Build","GitHub pages"]
     types: [completed]
   pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled, edited]
