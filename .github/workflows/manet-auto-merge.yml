@@ -26,9 +26,6 @@ concurrency:
 jobs:
   merge:
     name: Handle passing PRs
-    # Self-hosted is safe here: pull_request_target runs only base-branch
-    # workflow code, and this job never checks out or executes PR-head code
-    # (it checks out a pinned docs commit and makes API calls).
     # Hosted on purpose: this job holds a write token, so it must not share a persistent
     # self-hosted runner with jobs that run PR code. Revisit with dedicated JIT runners.
     runs-on: ubuntu-latest
